@@ -20,7 +20,7 @@ Our mission is to demonstrate that scientific method can operate independently o
 | Project | Description |
 |----------|--------------|
 | **[Aurora Workflow Orchestration (AWO)](https://github.com/Wright-Shawn/Aurora-Workflow-Orchestration)** | Defines the Aurora Method — a reproducible research workflow framework linking AI reasoning with human validation. |
-| **[CRI Core](https://github.com/Wright-Shawn/CRI-Core)** | Execution layer that runs AWO workflows deterministically and records immutable audit trails. |
+| **[CRI-CORE](https://github.com/Wright-Shawn/CRI-Core)** | Execution layer that runs AWO workflows deterministically and records immutable audit trails. |
 | **[Waveframe v4.0](https://github.com/Wright-Shawn/Waveframe-v4.0)** | Observer-driven cosmology exploring information-based expansion and entropy-action dynamics. |
 | **[Societal Health Simulator](https://github.com/Wright-Shawn/Societal-Health-Simulator)** | Modeling framework for systemic progress and societal resilience. |
 
