@@ -1,4 +1,6 @@
-![Waveframe Labs Banner](figures/Waveframe_Labs_banner.PNG)
+<div align="center">
+  <img src="figures/Waveframe_Labs_banner.PNG" alt="Waveframe Labs Banner" width="640"/>
+</div>
 
 # Waveframe Labs
 
