@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="figures/awo_banner_cri.png" alt="Waveframe Labs Banner" width="640"/>
+  <img src="figures/Waveframe_Labs_banner.PNG" alt="Waveframe Labs Banner" width="640"/>
 </p>
 
 # Waveframe Labs
