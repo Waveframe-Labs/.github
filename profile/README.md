@@ -49,7 +49,7 @@ All artifacts are archived under DOI and cryptographically signed for provenance
 
 ## Learn More
 
-- Website: [https://waveframelabs.org](https://waveframelabs.org)  (*coming soon*)
+- Website: [https://waveframelabs.org](https://waveframelabs.org)  
 - ORCID: [0009-0006-6043-9295](https://orcid.org/0009-0006-6043-9295)  
 - Email: swright@waveframelabs.org  
 - Zenodo: (placeholder for org-level DOI)
