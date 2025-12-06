@@ -1,61 +1,100 @@
+<p align="center">
+  <img src="../waveframe-logo-banner-mark.png" alt="Waveframe Labs Banner" width="600">
+</p>
+
 # Waveframe Labs
 
-**Independent Research Initiative for Reproducible AI–Human Science**
+**Independent Research Institute for AI–Human Reproducibility and Epistemic Governance**  
+Operating under the **Aurora Research Initiative (ARI)** — the formal governance layer for scientific AI.
 
 ---
 
-## Overview
+# Aurora Hierarchy (Full Institutional Stack)
 
-Waveframe Labs is a self-directed open-science organization developing reproducible frameworks for AI-assisted reasoning, validation, and discovery.  
-Our mission is to demonstrate that scientific method can operate independently of institutions — driven by transparent workflows, verifiable artifacts, and continuous orchestration between human insight and machine intelligence.
+### **Layer 0A — Neurotransparency Doctrine**  
+- Epistemic foundation defining cognitive integrity and traceability.  
+- Establishes why governance is required.
+
+### **Layer 0B — Neurotransparency Specification (NTS)**  
+- Compliance law for verifiable AI–human collaboration.  
+- **DOI:** 10.5281/zenodo.17809676
+
+### **Layer 1 — Aurora Research Initiative (ARI)**  
+- Institutional governance, epistemic rules, and global policy constraints.  
+- **DOI:** 10.5281/zenodo.17743096
+
+### **Layer 2 — Aurora Workflow Orchestration (AWO)**  
+- Methodology defining roles, manifests, approvals, falsifiability, and reproducible workflows.
+
+### **Layer 3 — CRI-CORE**  
+- Deterministic enforcement engine for provenance, audit trails, and workflow validation.
+
+### **Layer 4 — Applied Case Studies**  
+- Waveframe v4.0 (cosmology), Societal Health Simulator, Tauwarp, and future demonstrators.
+
+### **Layer 5 — Tooling Ecosystem**  
+- Metadata Pipeline, Stamp, PDF Forge, Validators, and additional utilities.
 
 ---
 
-## Core Projects
+# Core Repositories
 
-| Project | Description |
-|----------|--------------|
-| **[Aurora Workflow Orchestration (AWO)](https://github.com/Waveframe-Labs/Aurora-Workflow-Orchestration)** | Defines the Aurora Method — a reproducible research workflow framework linking AI reasoning with human validation. |
-| **[CRI-CORE](https://github.com/Waveframe-Labs/CRI-Core)** | Execution layer that runs AWO workflows deterministically and records immutable audit trails. |
-| **[Waveframe v4.0](https://github.com/Waveframe-Labs/Waveframe-v4.0)** | Observer-driven cosmology exploring information-based expansion and entropy-action dynamics. |
-| **[Societal Health Simulator](https://github.com/Waveframe-Labs/Societal-Health-Simulator)** | Modeling framework for systemic progress and societal resilience. |
+| Layer | Project | Description |
+|-------|---------|-------------|
+| **0A** | Neurotransparency Doctrine | Epistemic foundation; explains why governance is required. |
+| **0B** | Neurotransparency Specification (NTS) | Enforceable compliance rules for AI–human research. |
+| **1** | Aurora Research Initiative (ARI) | Institutional governance and epistemic law. |
+| **2** | Aurora Workflow Orchestration (AWO) | Methodology for reproducible scientific workflows. |
+| **3** | CRI-CORE | Deterministic orchestration and provenance enforcement engine. |
+| **4** | Waveframe v4.0 | Cosmology case study exploring entropy–action and observer dynamics. |
+| **4** | Societal Health Simulator (SHS) | Sociotechnical modeling and interactive systems simulation. |
+| **5** | Tooling Suite | Metadata Pipeline, Stamp, PDF Forge, validators, and organizational utilities. |
 
 ---
 
-## Research Philosophy
+# Research Philosophy
 
-Waveframe Labs approaches science as a workflow problem, not an institutional privilege.  
-Every project follows the same reproducible pattern:
+Waveframe Labs treats science as an **epistemic workflow**, not an institutional privilege.
 
+### Core Premises
+- Reproducibility is a **mechanical problem**, solved through governance + tooling.  
+- AI is a **cognitive instrument**, not an authority.  
+- Human and machine reasoning must be **traceable, comparable, and falsifiable**.  
+- Every artifact must have **provenance**, **metadata**, and **attestation**.
+
+### Standard Workflow  
 ```
-Design → Orchestrate → Verify → Publish → Archive
+Design → Orchestrate → Verify → Publish → Preserve
 ```
-
-Each phase is logged, versioned, and validated through human–AI collaboration.
-
----
-
-## Licensing
-
-| Layer | License |
-|-------|----------|
-| Frameworks (AWO, Waveframe) | Apache 2.0 |
-| Documentation & Texts | CC BY 4.0 |
-| Tooling (CRI Core) | BSL 1.1 → Apache 2.0 after 3 years |
-
-All artifacts are archived under DOI and cryptographically signed for provenance.
+Every phase is validated under AWO and enforced through CRI-CORE.
 
 ---
 
-## Learn More
+# Licensing
 
-- Website: [https://waveframelabs.org](https://waveframelabs.org)  
-- ORCID: [0009-0006-6043-9295](https://orcid.org/0009-0006-6043-9295)  
-- Email: swright@waveframelabs.org  
-- Zenodo: (placeholder for org-level DOI)
+| Category | License |
+|----------|---------|
+| Text & Documentation | CC BY-NC-SA 4.0 |
+| Methods & Frameworks (AWO, ARI) | CC BY 4.0 |
+| Tooling & Code (CRI-CORE, Utilities) | Apache 2.0 |
+
+All versioned releases are assigned DOIs and include cryptographic provenance.
+
+---
+
+# Links & References
+
+- 🌐 Website — https://waveframelabs.org  
+- 🧭 Aurora Hierarchy — https://waveframelabs.org/hierarchy.html  
+- 📘 Neurotransparency Doctrine — (DOI pending)  
+- 📗 Neurotransparency Specification (NTS) — https://doi.org/10.5281/zenodo.17809676  
+- 🏛 Aurora Research Initiative (ARI) — https://doi.org/10.5281/zenodo.17743096  
+- 📚 Zenodo Archive — (organization-level collection coming soon)  
+- 🔬 ORCID — https://orcid.org/0009-0006-6043-9295  
+- 📧 Contact — swright@waveframelabs.org  
 
 ---
 
 <p align="center">
-  <sub>© 2025 Waveframe Labs · Independent Open-Science Research Entity</sub>
+  <sub>© 2025 Waveframe Labs · Independent AI–Human Research Institute</sub>
 </p>
