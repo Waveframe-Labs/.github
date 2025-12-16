@@ -2,7 +2,14 @@
   <img src="../waveframe-logo-banner-mark.png" alt="Waveframe Labs Banner" width="600">
 </p>
 
-# Waveframe Labs
+# Waveframe Labs  
+
+## Core Concept DOIs  
+[![ARI](https://zenodo.org/badge/DOI/10.5281/zenodo.17743096.svg)](https://doi.org/10.5281/zenodo.17743096)
+[![AWO](https://zenodo.org/badge/DOI/10.5281/zenodo.17013612.svg)](https://doi.org/10.5281/zenodo.17013612)
+[![Waveframe v4.0](https://zenodo.org/badge/DOI/10.5281/zenodo.16872199.svg)](https://doi.org/10.5281/zenodo.16872199)
+[![SHS](https://zenodo.org/badge/DOI/10.5281/zenodo.17258419.svg)](https://doi.org/10.5281/zenodo.17258419)
+[![NTS](https://zenodo.org/badge/DOI/10.5281/zenodo.17809676.svg)](https://doi.org/10.5281/zenodo.17809676)
 
 **Independent Research Institute for AI–Human Reproducibility and Epistemic Governance**  
 Operating under the **Aurora Research Initiative (ARI)** — the formal governance layer for scientific AI.
