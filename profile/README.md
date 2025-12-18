@@ -19,7 +19,10 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17258419.svg)](https://doi.org/10.5281/zenodo.17258419)
 
 **Neurotransparency Standard (NTS)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17809676.svg)](https://doi.org/10.5281/zenodo.17809676)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17809676.svg)](https://doi.org/10.5281/zenodo.17809676)  
+
+**Neurotransparency Doctrine (NTD)**  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17957384.svg)](https://doi.org/10.5281/zenodo.17957384)  
 
 **Independent Research Institute for AI–Human Reproducibility and Epistemic Governance**  
 Operating under the **Aurora Research Initiative (ARI)** — the formal governance layer for scientific AI.
