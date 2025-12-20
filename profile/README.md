@@ -106,7 +106,7 @@ All versioned releases are assigned DOIs and include cryptographic provenance.
 
 - 🌐 Website — https://waveframelabs.org  
 - 🧭 Aurora Hierarchy — https://waveframelabs.org/hierarchy.html  
-- 📘 Neurotransparency Doctrine — (DOI pending)  
+- 📘 Neurotransparency Doctrine — https://doi.org/10.5281/zenodo.17957384   
 - 📗 Neurotransparency Specification (NTS) — https://doi.org/10.5281/zenodo.17809676  
 - 🏛 Aurora Research Initiative (ARI) — https://doi.org/10.5281/zenodo.17743096  
 - 📚 Zenodo Archive — (organization-level collection coming soon)  
