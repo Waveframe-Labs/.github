@@ -3,7 +3,7 @@ title: "Waveframe Labs System Architecture Overview"
 version: "1.0.0"
 status: "Active"
 created: "2025-12-29"
-updated: "2025-12-29"
+updated: "2026-01-27"
 type: "architecture"
 author: "Waveframe Labs"
 maintainer: "Waveframe Labs"
@@ -104,7 +104,7 @@ Acts as the continuous integration layer for scientific truth.
 Transforms validated research into external deliverables.
 
 Components:
-• Stamp — metadata and provenance injection  
+• Stamp — metadata and provenance validator 
 • Forge — publication generator (papers, PDFs, releases)  
 
 This is where the outside world consumes Waveframe outputs.
@@ -116,9 +116,9 @@ This is where the outside world consumes Waveframe outputs.
 Scientific work produced by the system.
 
 Examples:
-• Waveframe XR cosmology  
+• Waveframe v4.0 cosmology  
 • Societal Health Simulator  
-• Gradience  
+• Gradience
 • NEMERA and other future models  
 
 Outputs are not infrastructure — they sit on top of it.
@@ -147,36 +147,9 @@ CRI-CORE
 ↓  
 Stamp → Forge  
 ↓  
-Waveframe XR / SHS / Gradience / others
+Waveframe v4.0 / SHS / Gradience / others
 
 Each step depends on earlier layers being stable.
-
----
-
-## 5. Development Guidance
-
-Current active focus:
-• Lexon v0.0.1 creation  
-• Glyphtrace early conceptual work  
-
-Planned later (dependency-based order):
-• Signum after Lexon matures  
-• Tracelink after Glyphtrace produces stable tokens  
-• CRI-CORE after Tracelink lineage is formalized  
-
-Stamp and Forge evolve alongside validation maturity.
-
----
-
-## 6. Design Goals
-
-• Traceable reasoning from concept to publication  
-• Machine-navigable semantics  
-• No ambiguity between layers  
-• Scales to AI-assisted research  
-• Capable of outliving individual contributors  
-
-The end-state is a self-sustaining knowledge engine.
 
 ---
 
@@ -196,29 +169,14 @@ Every component has a clear upstream and downstream role.
 ## 8. Status Snapshot
 
 • ARI, NTS, AWO — foundation in active use  
-• Lexon — now being created  
+• Lexon — planned after CRI-CORE  
 • Glyphtrace — early development  
 • Signum — planned after Lexon  
 • Tracelink — planned after Glyphtrace  
 • CRI-CORE — future enforcement layer  
 • Stamp/Forge — publication infrastructure (partial)  
 
-No new repos are created until Lexon and Glyphtrace stabilize.
-
----
-
-## 9. Long-Term Vision
-
-Once governance and language layers are solid:
-
-• development speed accelerates  
-• all new tools plug into the same foundation  
-• concept drift disappears  
-• provenance becomes automatic  
-• publication becomes deterministic  
-• AI agent research becomes possible  
-
-The architecture matures toward a self-sustaining scientific institution.
+No new conceptual development until post-CRI-CORE v1.0.0
 
 ---
 
