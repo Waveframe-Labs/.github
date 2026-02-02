@@ -12,6 +12,9 @@
 **Aurora Workflow Orchestration (AWO)**  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17013612.svg)](https://doi.org/10.5281/zenodo.17013612)
 
+**Stamp (Deterministic Artifact & Metadata Validator)**  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18436622.svg)](https://doi.org/10.5281/zenodo.18436622)
+
 **Waveframe v4.0**  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16872199.svg)](https://doi.org/10.5281/zenodo.16872199)
 
@@ -22,7 +25,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17809676.svg)](https://doi.org/10.5281/zenodo.17809676)  
 
 **Neurotransparency Doctrine (NTD)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17957384.svg)](https://doi.org/10.5281/zenodo.17957384)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17957384.svg)](https://doi.org/10.5281/zenodo.17957384)    
 
 **Independent Research Institute for AI–Human Reproducibility and Epistemic Governance**  
 Operating under the **Aurora Research Initiative (ARI)** — the formal governance layer for scientific AI.
