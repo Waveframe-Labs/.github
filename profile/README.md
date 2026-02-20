@@ -1,125 +1,134 @@
 <p align="center">
-  <img src="../master-banner.png" alt="Waveframe Labs Banner" width="600">
+```
+`<img src="../master-banner.png" alt="Waveframe Labs Banner" width="600">`{=html}
+```{=html}
 </p>
 
-# Waveframe Labs  
+# Waveframe Labs
 
-## Core Concept & Infrastructure DOIs
+Waveframe Labs builds deterministic enforcement and validation
+infrastructure for governed AI workflows.
 
-**Aurora Research Initiative (ARI)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17743096.svg)](https://doi.org/10.5281/zenodo.17743096)
+We focus on the execution boundary --- the point where system state
+changes under regulatory, operational, or institutional risk.
 
-**Aurora Workflow Orchestration (AWO)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17013612.svg)](https://doi.org/10.5281/zenodo.17013612)
-
-**Stamp (Deterministic Artifact & Metadata Validator)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18436622.svg)](https://doi.org/10.5281/zenodo.18436622)
-
-**Neurotransparency Standard (NTS)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17809676.svg)](https://doi.org/10.5281/zenodo.17809676)  
-
-**Neurotransparency Doctrine (NTD)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17957384.svg)](https://doi.org/10.5281/zenodo.17957384)    
-
-## Flagship Case Study DOIs
-
-**Waveframe v4.0 (Observer-driven cosmology and entropy dynamics)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16872199.svg)](https://doi.org/10.5281/zenodo.16872199)
-
-**Societal Health Simulator (SHS)**  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17258419.svg)](https://doi.org/10.5281/zenodo.17258419)
-
-**Independent Research Institute for AI–Human Reproducibility and Epistemic Governance**  
-Operating under the **Aurora Research Initiative (ARI)** — the formal governance layer for scientific AI.
+Governance is only meaningful if that boundary is structurally enforced.
 
 ---
 
-# Aurora Hierarchy (Full Institutional Stack)
+## Core Infrastructure DOIs
 
-### **Layer 0A — Neurotransparency Doctrine**  
-- Epistemic foundation defining cognitive integrity and traceability.  
-- Establishes why governance is required.
+Neurotransparency Doctrine (NTD)\
+https://doi.org/10.5281/zenodo.17957384
 
-### **Layer 0B — Neurotransparency Specification (NTS)**  
-- Compliance law for verifiable AI–human collaboration.  
-- **DOI:** 10.5281/zenodo.17809676
+Neurotransparency Standard (NTS)\
+https://doi.org/10.5281/zenodo.17809676
 
-### **Layer 1 — Aurora Research Initiative (ARI)**  
-- Institutional governance, epistemic rules, and global policy constraints.  
-- **DOI:** 10.5281/zenodo.17743096
+Aurora Research Initiative (ARI)\
+https://doi.org/10.5281/zenodo.17743096
 
-### **Layer 2 — Aurora Workflow Orchestration (AWO)**  
-- Methodology defining roles, manifests, approvals, falsifiability, and reproducible workflows.
+Aurora Workflow Orchestration (AWO)\
+https://doi.org/10.5281/zenodo.17013612
 
-### **Layer 3 — CRI-CORE**  
-- Deterministic enforcement engine for provenance, audit trails, and workflow validation.
+Stamp (Deterministic Artifact & Metadata Validator)\
+https://doi.org/10.5281/zenodo.18436622
 
-### **Layer 4 — Applied Case Studies**  
-- Waveframe v4.0 (cosmology), Societal Health Simulator, Tauwarp, and future demonstrators.
+---
 
-### **Layer 5 — Tooling Ecosystem**  
-- Metadata Pipeline, Stamp, PDF Forge, Validators, and additional utilities.
+# Architectural Layers
+
+Waveframe Labs separates governance, method, enforcement, and validation
+into distinct layers:
+
+Governance --- ARI / NTS\
+Defines institutional authority boundaries, policy contracts, and AI
+disclosure requirements.
+
+Method --- AWO\
+Defines structured workflow topology, role separation, manifests, and
+reproducibility guarantees.
+
+Enforcement --- CRI-CORE\
+Deterministic transition-boundary enforcement engine.\
+Validates that state changes satisfy declared contracts before they
+commit.
+
+Validation --- Stamp\
+Schema-agnostic artifact and metadata validator.\
+Emits deterministic diagnostics and machine-readable outputs for
+downstream enforcement.
+
+---
+
+# What This Organization Builds
+
+Waveframe Labs builds infrastructure for:
+
+-   Atomic, auditable state transitions
+-   Explicit authority modeling
+-   Deterministic enforcement of declared contracts
+-   Cryptographic artifact integrity
+-   Machine-verifiable provenance
+
+We do not collapse policy, authority, and execution into a single layer.
+
+Policy sits above.\
+Execution sits below.\
+The enforcement kernel asks one question:
+
+"Can this transition commit safely?"
 
 ---
 
 # Core Repositories
 
-| Layer | Project | Description |
-|-------|---------|-------------|
-| **0A** | Neurotransparency Doctrine | Epistemic foundation; explains why governance is required. |
-| **0B** | Neurotransparency Specification (NTS) | Enforceable compliance rules for AI–human research. |
-| **1** | Aurora Research Initiative (ARI) | Institutional governance and epistemic law. |
-| **2** | Aurora Workflow Orchestration (AWO) | Methodology for reproducible scientific workflows. |
-| **3** | CRI-CORE | Deterministic orchestration and provenance enforcement engine. |
-| **4** | Waveframe v4.0 | Cosmology case study exploring entropy–action and observer dynamics. |
-| **4** | Societal Health Simulator (SHS) | Sociotechnical modeling and interactive systems simulation. |
-| **5** | Tooling Suite | Metadata Pipeline, Stamp, PDF Forge, validators, and organizational utilities. |
+  ------------------------------------------------------------------------
+  Layer                         Project              Purpose
+  ----------------------------- -------------------- ---------------------
+  Governance                    ARI                  Institutional
+                                                     authority and
+                                                     governance
+                                                     constraints
 
----
+  Specification                 NTS                  Machine-verifiable AI
+                                                     disclosure
+                                                     requirements
 
-# Research Philosophy
+  Method                        AWO                  Structured workflow
+                                                     topology for governed
+                                                     research
 
-Waveframe Labs treats science as an **epistemic workflow**, not an institutional privilege.
+  Enforcement                   CRI-CORE             Deterministic
+                                                     transition-boundary
+                                                     enforcement
 
-### Core Premises
-- Reproducibility is a **mechanical problem**, solved through governance + tooling.  
-- AI is a **cognitive instrument**, not an authority.  
-- Human and machine reasoning must be **traceable, comparable, and falsifiable**.  
-- Every artifact must have **provenance**, **metadata**, and **attestation**.
-
-### Standard Workflow  
-```
-Design → Orchestrate → Verify → Publish → Preserve
-```
-Every phase is validated under AWO and enforced through CRI-CORE.
+  Validation                    Stamp                Artifact validation
+                                                     and diagnostics
+                                                     engine
+  ------------------------------------------------------------------------
 
 ---
 
 # Licensing
 
-| Category | License |
-|----------|---------|
-| Text & Documentation | CC BY-NC-SA 4.0 |
-| Methods & Frameworks (AWO, ARI) | CC BY 4.0 |
-| Tooling & Code (CRI-CORE, Utilities) | Apache 2.0 |
+  Category                           License
+  ---------------------------------- -----------------
+  Governance & Methods (ARI, AWO)    CC BY 4.0
+  Specification (NTS)                CC BY 4.0
+  Tooling & Code (CRI-CORE, Stamp)   Apache 2.0
+  Documentation                      CC BY-NC-SA 4.0
 
-All versioned releases are assigned DOIs and include cryptographic provenance.
+All versioned releases include DOIs and cryptographic provenance
+artifacts where applicable.
 
----
+------------------------------------------------------------------------
 
-# Links & References
+# Links
 
-- 🌐 Website — https://waveframelabs.org  
-- 🧭 Aurora Hierarchy — https://waveframelabs.org/hierarchy.html  
-- 📘 Neurotransparency Doctrine — https://doi.org/10.5281/zenodo.17957384   
-- 📗 Neurotransparency Specification (NTS) — https://doi.org/10.5281/zenodo.17809676  
-- 🏛 Aurora Research Initiative (ARI) — https://doi.org/10.5281/zenodo.17743096  
-- 📚 Zenodo Archive — (organization-level collection coming soon)  
-- 🔬 ORCID — https://orcid.org/0009-0006-6043-9295  
-- 📧 Contact — swright@waveframelabs.org  
+Website --- https://waveframelabs.org\
+ORCID --- https://orcid.org/0009-0006-6043-9295\
+Contact --- swright@waveframelabs.org
 
----
+------------------------------------------------------------------------
 
-<p align="center">
-  <sub>© 2025 Waveframe Labs · Independent AI–Human Research Institute</sub>
-</p>
+© 2026 Waveframe Labs · Governance Infrastructure for AI Workflows
