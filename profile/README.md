@@ -107,10 +107,10 @@ artifacts where applicable.
 
 # Links
 
-Website --- https://waveframelabs.org\
-ORCID --- https://orcid.org/0009-0006-6043-9295\
-Contact --- swright@waveframelabs.org
-
+**Website** --- https://waveframelabs.org\  
+**ORCID** --- https://orcid.org/0009-0006-6043-9295\  
+**Contact** --- swright@waveframelabs.org  
+  
 ------------------------------------------------------------------------
 
 © 2026 Waveframe Labs · Governance Infrastructure for AI Workflows
