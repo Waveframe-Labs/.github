@@ -38,20 +38,20 @@ https://doi.org/10.5281/zenodo.18436622
 Waveframe Labs separates governance, method, enforcement, and validation
 into distinct layers:
 
-Governance --- ARI / NTS\
+**Governance** --- ARI / NTS\
 Defines institutional authority boundaries, policy contracts, and AI
 disclosure requirements.
 
-Method --- AWO\
+**Method** --- AWO\
 Defines structured workflow topology, role separation, manifests, and
 reproducibility guarantees.
 
-Enforcement --- CRI-CORE\
+**Enforcement** --- CRI-CORE\
 Deterministic transition-boundary enforcement engine.\
 Validates that state changes satisfy declared contracts before they
 commit.
 
-Validation --- Stamp\
+**Validation** --- Stamp\
 Schema-agnostic artifact and metadata validator.\
 Emits deterministic diagnostics and machine-readable outputs for
 downstream enforcement.
@@ -80,41 +80,25 @@ The enforcement kernel asks one question:
 
 # Core Repositories
 
-  ------------------------------------------------------------------------
-  Layer                         Project              Purpose
-  ----------------------------- -------------------- ---------------------
-  Governance                    ARI                  Institutional
-                                                     authority and
-                                                     governance
-                                                     constraints
-
-  Specification                 NTS                  Machine-verifiable AI
-                                                     disclosure
-                                                     requirements
-
-  Method                        AWO                  Structured workflow
-                                                     topology for governed
-                                                     research
-
-  Enforcement                   CRI-CORE             Deterministic
-                                                     transition-boundary
-                                                     enforcement
-
-  Validation                    Stamp                Artifact validation
-                                                     and diagnostics
-                                                     engine
-  ------------------------------------------------------------------------
+| Layer         | Project    | Purpose                                                   |
+|---------------|------------|----------------------------------------------------------
+| Governance    | ARI        | Institutional authority and governance constraints       
+| Specification | NTS        | Machine-verifiable AI disclosure requirements            
+| Method        | AWO        | Structured workflow topology for governed research       
+| Enforcement   | CRI-CORE   | Deterministic transition-boundary enforcement            
+| Validation    | Stamp      | Artifact validation and diagnostics engine              
+  --------------------------------------------------------------------------------------
 
 ---
 
 # Licensing
 
-  Category                           License
-  ---------------------------------- -----------------
-  Governance & Methods (ARI, AWO)    CC BY 4.0
-  Specification (NTS)                CC BY 4.0
-  Tooling & Code (CRI-CORE, Stamp)   Apache 2.0
-  Documentation                      CC BY-NC-SA 4.0
+| Category                                 | License         |
+|------------------------------------------|-----------------|
+| Governance & Methods (ARI, AWO)          | CC BY 4.0       |
+| Specification (NTS)                      | CC BY 4.0       |
+| Tooling & Code (CRI-CORE, Stamp)         | Apache 2.0      |
+| Documentation                            | CC BY-NC-SA 4.0 |
 
 All versioned releases include DOIs and cryptographic provenance
 artifacts where applicable.
