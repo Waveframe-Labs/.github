@@ -1,7 +1,5 @@
 <p align="center">
-```
-`<img src="../master-banner.png" alt="Waveframe Labs Banner" width="600">`{=html}
-```{=html}
+  <img src="../master-banner.png" alt="Waveframe Labs Banner" width="600">
 </p>
 
 # Waveframe Labs
