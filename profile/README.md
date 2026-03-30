@@ -3,7 +3,7 @@ title: "Waveframe Labs Organization Overview"
 filetype: "documentation"
 type: "non-normative"
 domain: "infrastructure"
-version: "1.1.1"
+version: "1.2.0"
 doi: "N/A"
 status: "Active"
 created: "2026-03-04"
@@ -35,9 +35,11 @@ ai_assisted: "partial"
 
 **Waveframe Labs builds systems that stop unsafe AI actions before they execute.**
 
-As AI systems become capable of taking real-world actions — moving money, deploying code, approving decisions — most systems still rely on monitoring, logging, or after-the-fact auditing.
+As AI systems begin to take real-world actions — moving money, deploying code, approving decisions — most systems still rely on monitoring or auditing.
 
-But none of those control the moment that actually matters:
+But those happen before or after execution.
+
+They do not control the moment that actually matters:
 
 **execution.**
 
@@ -50,20 +52,99 @@ At that boundary, the system must decide:
 
 ---
 
+## Start Here (Minimal Stack)
+
+Waveframe provides a minimal, executable pipeline for controlling AI-driven actions.
+
+### 1. Enforcement (Core)
+
+```
+pip install cricore
+```
+
+Deterministically decides whether an action is allowed to execute.
+
+---
+
+### 2. Supporting Layers
+
+```
+pip install cricore-proposal-normalizer
+```
+
+Converts actions into structured inputs for enforcement.
+
+```
+pip install cricore-contract-compiler
+```
+
+Compiles governance rules into enforceable contracts.
+
+---
+
+### 3. Demo (Proof)
+
+**Finance Governance Demo**
+
+An AI attempts to move $2M:
+
+- Without enforcement → action executes  
+- With CRI-CORE → action is blocked  
+
+→ See: `governed-mutation-pipeline-demo`
+
+---
+
 ## What This Organization Contains
 
-This organization contains the infrastructure required to enforce that decision.
-
-It includes:
+This organization contains the infrastructure required to enforce execution control:
 
 - deterministic enforcement tooling  
 - validation utilities  
 - governance and contract definition layers  
-- demonstration repositories showing real-world scenarios  
+- demonstration repositories  
 
-Together, these components form a system that ensures:
+Together, these components ensure:
 
 > **no action executes unless it passes validation**
+
+---
+
+# Architectural Layers
+
+Waveframe separates governance, method, enforcement, and validation into distinct layers.
+
+Each layer supports a single outcome:
+
+**deterministic control over execution**
+
+**Governance — ARI / NTS**  
+Defines authority, policy contracts, and AI disclosure requirements.
+
+**Method — AWO**  
+Defines workflow structure and role separation.
+
+**Enforcement — CRI-CORE**  
+Deterministic execution control layer.
+
+**Validation — Stamp**  
+Validates artifact structure and metadata before enforcement.
+
+---
+
+# Demonstration Repositories
+
+Repositories in this organization show how execution control works in practice.
+
+Examples include:
+
+- financial actions blocked due to missing approval  
+- governed lifecycle transitions  
+- structural validation scenarios  
+
+These demonstrations show:
+
+> **an action either executes — or it doesn’t**
 
 ---
 
@@ -81,66 +162,8 @@ https://doi.org/10.5281/zenodo.17743096
 Aurora Workflow Orchestration (AWO)  
 https://doi.org/10.5281/zenodo.17013612  
 
-Stamp (Deterministic Artifact & Metadata Validator)  
+Stamp  
 https://doi.org/10.5281/zenodo.18436622  
-
----
-
-# Architectural Layers
-
-Waveframe Labs separates governance, method, enforcement, and validation into distinct layers.
-
-Each layer exists to support a single outcome:
-
-**deterministic control over execution.**
-
-**Governance — ARI / NTS**  
-Defines authority, policy contracts, and AI disclosure requirements.
-
-**Method — AWO**  
-Defines workflow structure, role separation, and reproducibility requirements.
-
-**Enforcement — CRI-CORE**  
-Deterministic execution control layer that evaluates whether a proposed action satisfies structural constraints before it is allowed to execute.
-
-CRI-CORE is distributed as an installable Python package:
-```
-
-pip install cricore
-
-```
-
-**Validation — Stamp**  
-Validates artifact structure and metadata before enforcement.
-
-Stamp is distributed as an installable Python package:
-```
-pip install waveframe-stamp
-```
-
----
-
-# Demonstration Repositories
-
-Several repositories in this organization demonstrate how execution control works in practice.
-
-Examples include:
-
-- AI-driven financial actions blocked due to missing approval  
-- governed claim lifecycle transitions  
-- structural validation and integrity enforcement scenarios  
-
-These demonstrations show a simple idea:
-
-> **an action either passes validation and executes — or it doesn’t**
-
----
-
-# Publication Tooling
-
-Waveframe Forge provides tooling for generating structured, reproducible artifacts from governed Markdown sources.
-
-Publication artifacts are stored in the **Waveframe-Publications** repository.
 
 ---
 
@@ -151,15 +174,15 @@ Waveframe Labs develops systems for:
 - controlling AI-driven execution  
 - enforcing role separation and authority  
 - validating actions before they occur  
-- ensuring cryptographic integrity of execution artifacts  
-- producing auditable, machine-verifiable outcomes  
+- ensuring cryptographic integrity  
+- producing auditable outcomes  
 
-Policy definition, workflow structure, and execution enforcement are intentionally separated.
+Policy definition, workflow structure, and execution enforcement are separated.
 
 Policy sits above.  
 Execution sits below.  
 
-The enforcement layer answers one question:
+The system answers one question:
 
 **"Should this action be allowed to execute?"**
 
@@ -169,11 +192,11 @@ The enforcement layer answers one question:
 
 | Layer | Project | Purpose |
 |------|------|------|
-| Governance | ARI | Institutional authority and governance constraints |
-| Specification | NTS | Machine-verifiable AI disclosure requirements |
-| Method | AWO | Structured workflow topology for governed processes |
-| Enforcement | CRI-CORE | Deterministic execution control layer |
-| Validation | Stamp | Artifact validation and diagnostics engine |
+| Governance | ARI | Authority and governance constraints |
+| Specification | NTS | AI disclosure requirements |
+| Method | AWO | Workflow structure |
+| Enforcement | CRI-CORE | Execution control |
+| Validation | Stamp | Artifact validation |
 
 ---
 
@@ -181,12 +204,10 @@ The enforcement layer answers one question:
 
 | Category | License |
 |--------|--------|
-| Governance & Methods (ARI, AWO) | CC BY 4.0 |
-| Specification (NTS) | CC BY 4.0 |
-| Tooling & Code (CRI-CORE, Stamp) | Apache 2.0 |
+| Governance & Methods | CC BY 4.0 |
+| Specification | CC BY 4.0 |
+| Tooling & Code | Apache 2.0 |
 | Documentation | CC BY-NC-SA 4.0 |
-
-All versioned releases include DOIs and cryptographic provenance artifacts where applicable.
 
 ---
 
