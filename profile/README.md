@@ -113,7 +113,7 @@ Without enforcement:
 With CRI-CORE:
 → blocked due to missing approval
 
-👉 See: `governed-mutation-pipeline-demo`
+👉 See: `governed-finance-mutation-demo`
 
 ---
 
