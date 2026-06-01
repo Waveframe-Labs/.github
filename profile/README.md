@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../master-banner.png" alt="Waveframe Labs Banner" width="600">
+  <img src="https://raw.githubusercontent.com/Waveframe-Labs/.github/main/assets/branding/canon_wf_logo_extended.png" width="700">
 </p>
 
 # Waveframe Labs
