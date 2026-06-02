@@ -4,154 +4,280 @@
 
 # Waveframe Labs
 
-**What actually stops an AI system from executing a bad decision?**
+Deterministic execution-governance infrastructure for AI and automated systems.
 
 Most systems:
-- detect issues  
-- log them  
-- or audit after the fact  
 
-But by the time that happens, the action has already executed.
+* monitor behavior
+* generate alerts
+* or audit after execution
 
-**Waveframe Labs builds systems that decide whether an action is allowed to execute — before it happens.**
+Waveframe focuses on something else:
+
+> determining whether a proposed action is allowed to execute before it reaches production systems.
+
+---
+
+# Canonical Execution Flow
+
+```text
+Governance Source
+        ↓
+Governance-Ledger
+        ↓
+Contract Compiler
+        ↓
+Compiled Authority Contract
+        ↓
+Proposal Normalizer
+        ↓
+Canonical Proposal
+        ↓
+CRI-CORE
+        ↓
+COMMIT ALLOWED / BLOCKED
+        ↓
+Waveframe Guard
+        ↓
+Production System
+```
+
+Waveframe Cloud provides:
+
+* authority distribution
+* durable audit infrastructure
+* registry coordination
+* and receipt verification
 
 ---
 
 # Start Here
 
-### Install the enforcement layer
+### Install Waveframe Guard
 
 ```bash
-pip install cricore
-````
-
-CRI-CORE evaluates a proposed action and returns:
-
-```
-commit_allowed = true | false
+pip install waveframe-guard
 ```
 
-* `true` → action executes
-* `false` → action is blocked
-
-👉 This is the execution decision boundary.
+Waveframe Guard wraps runtime execution and enforces governance locally before actions execute.
 
 ---
 
-# Minimal Pipeline
+# Minimal Runtime Example
 
-You can run CRI-CORE alone, or as part of a simple pipeline:
+```python
+from waveframe_guard import install_guard, guard
 
-### 1. Structure the action
+install_guard(
+    actor={
+        "id": "user-1",
+        "type": "human",
+        "role": "intern"
+    },
+    contract_path="finance-policy.contract.json"
+)
 
-```bash
-pip install cricore-proposal-normalizer
+@guard
+def transfer(amount):
+    print(f"Transferred ${amount}")
+
+transfer(100)
 ```
 
-Converts an action into a structured input.
+```text
+Execution blocked:
+required role not satisfied: manager
+```
 
 ---
 
-### 2. Define the rules
+# Core Infrastructure Layers
+
+## Governance Layer
+
+### Governance-Ledger
+
+Transforms governed source text into deterministic authority artifacts.
+
+Provides:
+
+* governance normalization
+* semantic diagnostics
+* publication gating
+* lineage verification
+* authority publication
+
+---
+
+## Compilation Layer
+
+### CRI-CORE Contract Compiler
+
+Compiles governance policy into deterministic contracts.
 
 ```bash
 pip install cricore-contract-compiler
 ```
 
-Compiles roles, approvals, and constraints into enforceable contracts.
+Compiled contracts define:
+
+* authority requirements
+* approval thresholds
+* execution constraints
+* invariants
+* artifact requirements
 
 ---
 
-### 3. Enforce execution
+## Proposal Layer
+
+### Proposal Normalizer
+
+Builds canonical proposal objects from:
+
+* actors
+* mutations
+* contracts
+* governance artifacts
+
+```bash
+pip install cricore-proposal-normalizer
+```
+
+---
+
+## Enforcement Layer
+
+### CRI-CORE
+
+Deterministic execution-boundary enforcement kernel.
 
 ```bash
 pip install cricore
 ```
 
-Deterministically decides if the action executes.
+CRI-CORE evaluates:
 
----
+* contracts
+* proposals
+* runtime context
 
-# Example
+and returns:
 
-**Finance scenario**
+```python
+commit_allowed = True | False
+```
 
-An AI proposes moving $2M between cost centers.
+If `False`, the action must not execute.
 
-Without enforcement:
-→ action executes
-
-With CRI-CORE:
-→ blocked due to missing approval
-
-👉 See: `governed-finance-mutation-demo`
-
----
-
-# What This Organization Contains
-
-This organization provides the infrastructure required to control execution:
-
-* enforcement tooling
-* input normalization
-* contract compilation
-* validation utilities
-* working demonstrations
-
-The goal is simple:
-
-> **no action executes unless it passes validation**
-
----
-
-# Where CRI-CORE Fits
-
-CRI-CORE is the final step before execution.
-
-It does not:
+CRI-CORE does not:
 
 * generate actions
-* interpret meaning
-* make policy decisions
+* orchestrate workflows
+* interpret governance meaning
+* persist authority
 
-It only answers:
+It only determines:
 
-> **Does this action execute or not?**
-
----
-
-# Supporting Infrastructure (Optional)
-
-These layers support enforcement but are not required to get started:
-
-* **Stamp** — validates artifacts and metadata
-* **AWO** — workflow structure
-* **ARI / NTS** — governance and disclosure rules
+> whether a proposed action is admissible at execution time.
 
 ---
 
-# Demonstrations
+## Runtime Layer
 
-Repositories in this organization show real execution control:
+### Waveframe Guard
 
-* blocked financial actions
-* governed state transitions
-* validation failures
+Developer-facing runtime enforcement SDK.
 
-Each demo shows:
+Guard:
 
-> **an action either executes — or it doesn’t**
+* loads contracts
+* wraps execution
+* evaluates admissibility
+* blocks invalid actions locally
+* continues enforcement during Cloud outages
+
+---
+
+## Authority & Audit Layer
+
+### Waveframe Cloud
+
+Authority distribution and durable evidence infrastructure.
+
+Cloud provides:
+
+* contract registry distribution
+* immutable authority artifacts
+* audit ingestion
+* durable receipts
+* organizational coordination
+
+Cloud does not:
+
+* evaluate admissibility
+* execute actions
+* normalize governance
+
+---
+
+# Example Scenario
+
+## Financial Governance
+
+An AI proposes reallocating $2M between cost centers.
+
+Without enforcement:
+→ execution proceeds immediately
+
+With Waveframe:
+→ proposal evaluated against authority contract
+→ missing approval detected
+→ COMMIT BLOCKED
+
+The action never executes.
 
 ---
 
 # Core Repositories
 
-| Component           | Purpose                                   |
-| ------------------- | ----------------------------------------- |
-| CRI-CORE            | Execution decision layer                  |
-| Contract Compiler   | Converts rules into enforceable contracts |
-| Proposal Normalizer | Structures actions for evaluation         |
-| Stamp               | Validates artifacts                       |
+| Repository          | Purpose                                       |
+| ------------------- | --------------------------------------------- |
+| Waveframe Guard     | Runtime execution enforcement SDK             |
+| CRI-CORE            | Deterministic enforcement kernel              |
+| Governance-Ledger   | Governance operationalization infrastructure  |
+| Contract Compiler   | Governance contract compilation               |
+| Proposal Normalizer | Canonical proposal construction               |
+| Waveframe Cloud     | Authority distribution + audit durability     |
+| Waveframe Schemas   | Canonical protocol and object schemas         |
+| Waveframe Telemetry | Runtime telemetry and evidence infrastructure |
+| Waveframe Stamp     | Artifact and metadata validation              |
+| Waveframe pdf Forge | Publication and artifact generation           |
+
+---
+
+# Demonstrations
+
+Repositories in this organization demonstrate:
+
+* governed financial mutations
+* execution-boundary enforcement
+* approval threshold enforcement
+* role separation
+* admissibility replay
+* runtime governance blocking
+
+Each demo answers one question:
+
+> does the proposed action execute or not?
+
+---
+
+# Compatibility
+
+Version compatibility and dependency requirements are documented at:
+
+https://waveframelabs.org/compatibility.html
 
 ---
 
@@ -167,12 +293,12 @@ Each demo shows:
 
 # Links
 
-**Website** — [https://waveframelabs.org](https://waveframelabs.org)
-**ORCID** — [https://orcid.org/0009-0006-6043-9295](https://orcid.org/0009-0006-6043-9295)
-**Contact** — [swright@waveframelabs.org](mailto:swright@waveframelabs.org)
+Website — https://waveframelabs.org
+ORCID — https://orcid.org/0009-0006-6043-9295
+Contact — [swright@waveframelabs.org](mailto:swright@waveframelabs.org)
 
 ---
 
 <div align="center">
-  <sub>© 2026 Waveframe Labs — Independent Open-Science Research Entity</sub>
+  <sub>© 2026 Waveframe Labs</sub>
 </div>
