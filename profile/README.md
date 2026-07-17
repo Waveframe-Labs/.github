@@ -1,301 +1,178 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Waveframe-Labs/.github/main/assets/branding/canon_wf_logo_extended.png" width="700">
+  <img src="https://raw.githubusercontent.com/Waveframe-Labs/.github/main/assets/branding/canon_wf_logo_extended.png" width="700" alt="Waveframe Labs">
 </p>
 
 # Waveframe Labs
 
-Deterministic execution-governance infrastructure for AI and automated systems.
+**Governance infrastructure that prevents unsafe AI and automated actions from reaching production.**
 
-Most systems:
+AI can propose anything. Waveframe determines whether the proposed action is allowed to execute.
 
-* monitor behavior
-* generate alerts
-* or audit after execution
-
-Waveframe focuses on something else:
-
-> determining whether a proposed action is allowed to execute before it reaches production systems.
+> We stop bad AI actions in one function call.
 
 ---
 
-# Canonical Execution Flow
+## The Product
+
+Waveframe is an integrated governance and enforcement platform with distinct surfaces for governance teams, developers, operators, and auditors.
 
 ```text
-Governance Source
-        ↓
-Governance-Ledger
-        ↓
-Contract Compiler
-        ↓
-Compiled Authority Contract
-        ↓
-Proposal Normalizer
-        ↓
-Canonical Proposal
-        ↓
-CRI-CORE
-        ↓
-COMMIT ALLOWED / BLOCKED
-        ↓
-Waveframe Guard
-        ↓
-Production System
+Existing policy, SOP, or authority source
+                  ↓
+          Ledger Workspace
+                  ↓
+        Compiled authority
+                  ↓
+          Waveframe Cloud
+                  ↓
+          Waveframe Guard
+                  ↓
+              CRI-CORE
+                  ↓
+          ALLOW / BLOCK
+                  ↓
+        Production system
+                  ↓
+          Guard Inspector
 ```
 
-Waveframe Cloud provides:
+- **Ledger Workspace** turns organizational policy into governed, publishable authority.
+- **Waveframe Cloud** distributes immutable authority and preserves durable execution evidence.
+- **Waveframe Guard** gives developers a simple runtime enforcement boundary.
+- **CRI-CORE** deterministically decides whether a proposed mutation is admissible.
+- **Guard Inspector** explains decisions, authority, and evidence to operators and auditors.
 
-* authority distribution
-* durable audit infrastructure
-* registry coordination
-* and receipt verification
+Guard is the developer adoption entry point. Ledger Workspace is the governance and enterprise expansion surface.
 
 ---
 
-# Start Here
-
-### Install Waveframe Guard
+## Start With Guard
 
 ```bash
 pip install waveframe-guard
 ```
 
-Waveframe Guard wraps runtime execution and enforces governance locally before actions execute.
-
----
-
-# Minimal Runtime Example
-
 ```python
-from waveframe_guard import install_guard, guard
+from waveframe_guard import Guard
 
-install_guard(
-    actor={
-        "id": "user-1",
-        "type": "human",
-        "role": "intern"
-    },
-    contract_path="finance-policy.contract.json"
+guard = Guard.local(
+    authority="finance-policy@1.0.0"
 )
-
-@guard
-def transfer(amount):
-    print(f"Transferred ${amount}")
-
-transfer(100)
 ```
 
-```text
-Execution blocked:
-required role not satisfied: manager
-```
+Guard loads published authority, constructs the governed proposal, invokes deterministic enforcement, blocks inadmissible execution, and preserves decision evidence.
+
+Runtime enforcement remains local-first so a Cloud outage does not silently remove the execution boundary.
 
 ---
 
-# Core Infrastructure Layers
+## How Waveframe Works
 
-## Governance Layer
+1. A governance team starts with an existing policy, procedure, delegation-of-authority document, or other authority source.
+2. Ledger Workspace guides the team through normalization, diagnostics, compilation, review, and publication.
+3. The published authority receives a stable identity, version, and cryptographic hash.
+4. Waveframe Cloud distributes that authority to approved environments.
+5. An application or agent proposes an action through Waveframe Guard.
+6. Guard constructs a canonical proposal and submits it to CRI-CORE.
+7. CRI-CORE returns the kernel-owned `commit_allowed` decision.
+8. Guard either executes the action or prevents it from reaching the production mutation boundary.
+9. Decision evidence is preserved for replay, inspection, and audit.
 
-### Governance-Ledger
-
-Transforms governed source text into deterministic authority artifacts.
-
-Provides:
-
-* governance normalization
-* semantic diagnostics
-* publication gating
-* lineage verification
-* authority publication
+The system is model-agnostic. Proposed actions may originate from AI agents, traditional automation, applications, or human-operated workflows.
 
 ---
 
-## Compilation Layer
+## Open Infrastructure
 
-### CRI-CORE Contract Compiler
+| Repository | Purpose |
+| --- | --- |
+| [Waveframe Guard](https://github.com/Waveframe-Labs/Waveframe-Guard) | Developer-facing runtime enforcement SDK |
+| [CRI-CORE](https://github.com/Waveframe-Labs/CRI-CORE) | Deterministic execution-boundary enforcement kernel |
+| [Contract Compiler](https://github.com/Waveframe-Labs/CRI-CORE-Contract-Compiler) | Human governance to deterministic compiled authority |
+| [Proposal Normalizer](https://github.com/Waveframe-Labs/CRI-CORE-Proposal-Normalizer) | Canonical proposal construction and binding |
+| [Governance Ledger](https://github.com/Waveframe-Labs/Governance-Ledger) | Authority preparation and publication infrastructure |
 
-Compiles governance policy into deterministic contracts.
-
-```bash
-pip install cricore-contract-compiler
-```
-
-Compiled contracts define:
-
-* authority requirements
-* approval thresholds
-* execution constraints
-* invariants
-* artifact requirements
+These repositories provide the local developer path, deterministic protocols, and inspectable enforcement foundation.
 
 ---
 
-## Proposal Layer
+## Commercial Platform
 
-### Proposal Normalizer
+| Product | Role |
+| --- | --- |
+| **Ledger Workspace** | Collaborative governance authoring, review, lifecycle, and publication |
+| **Waveframe Cloud** | Authority distribution, organizational controls, and durable evidence |
+| **Guard Inspector** | Decision, authority, receipt, and replay inspection |
+| **Multi-tenant Operations** | Identity, tenancy, access control, supportability, and enterprise administration |
 
-Builds canonical proposal objects from:
-
-* actors
-* mutations
-* contracts
-* governance artifacts
-
-```bash
-pip install cricore-proposal-normalizer
-```
+The commercial product is the integrated Waveframe platform—not any single repository in isolation.
 
 ---
 
-## Enforcement Layer
+## Governance Foundation
 
-### CRI-CORE
+Waveframe's institutional governance and methodology remain separate from runtime product responsibilities.
 
-Deterministic execution-boundary enforcement kernel.
+| Repository | Authority |
+| --- | --- |
+| [Aurora Research Initiative](https://github.com/Waveframe-Labs/Aurora-Research-Initiative) | Governance authority and institutional accountability |
+| [Neurotransparency Doctrine](https://github.com/Waveframe-Labs/Neurotransparency-Doctrine) | Epistemic doctrine and human decision ownership |
+| [Neurotransparency Specification](https://github.com/Waveframe-Labs/Neurotransparency-Specification) | Structural compliance requirements |
+| [Aurora Workflow Orchestration](https://github.com/Waveframe-Labs/Aurora-Workflow-Orchestration) | Governed workflow methodology |
 
-```bash
-pip install cricore
-```
-
-CRI-CORE evaluates:
-
-* contracts
-* proposals
-* runtime context
-
-and returns:
-
-```python
-commit_allowed = True | False
-```
-
-If `False`, the action must not execute.
-
-CRI-CORE does not:
-
-* generate actions
-* orchestrate workflows
-* interpret governance meaning
-* persist authority
-
-It only determines:
-
-> whether a proposed action is admissible at execution time.
+These sources define governance expectations. Runtime products operationalize and enforce compiled authority without redefining it.
 
 ---
 
-## Runtime Layer
+## Core Invariants
 
-### Waveframe Guard
-
-Developer-facing runtime enforcement SDK.
-
-Guard:
-
-* loads contracts
-* wraps execution
-* evaluates admissibility
-* blocks invalid actions locally
-* continues enforcement during Cloud outages
+- The enforcement decision occurs before the production mutation.
+- `commit_allowed` is owned by the enforcement kernel, not reconstructed by callers.
+- Guard never compiles natural-language policy during runtime enforcement.
+- Published authority is bound by identity, version, and cryptographic hash.
+- Blocked actions do not reach the governed execution function.
+- Local enforcement continues during Cloud unavailability.
+- Cloud preserves evidence but does not replace the local execution decision.
+- Inspector explains recorded decisions but does not rewrite them.
 
 ---
 
-## Authority & Audit Layer
+## Example
 
-### Waveframe Cloud
+An AI system proposes reallocating **$2 million** between cost centers.
 
-Authority distribution and durable evidence infrastructure.
-
-Cloud provides:
-
-* contract registry distribution
-* immutable authority artifacts
-* audit ingestion
-* durable receipts
-* organizational coordination
-
-Cloud does not:
-
-* evaluate admissibility
-* execute actions
-* normalize governance
-
----
-
-# Example Scenario
-
-## Financial Governance
-
-An AI proposes reallocating $2M between cost centers.
-
-Without enforcement:
-→ execution proceeds immediately
+Without an execution boundary, the proposal may reach the financial system before a governance failure is detected.
 
 With Waveframe:
-→ proposal evaluated against authority contract
-→ missing approval detected
-→ COMMIT BLOCKED
 
-The action never executes.
+```text
+Proposal received
+      ↓
+Authority resolved and verified
+      ↓
+Required approval missing
+      ↓
+commit_allowed = False
+      ↓
+Execution blocked
+      ↓
+Evidence preserved for inspection
+```
 
----
-
-# Core Repositories
-
-| Repository          | Purpose                                       |
-| ------------------- | --------------------------------------------- |
-| Waveframe Guard     | Runtime execution enforcement SDK             |
-| CRI-CORE            | Deterministic enforcement kernel              |
-| Governance-Ledger   | Governance operationalization infrastructure  |
-| Contract Compiler   | Governance contract compilation               |
-| Proposal Normalizer | Canonical proposal construction               |
-| Waveframe Cloud     | Authority distribution + audit durability     |
-| Waveframe Schemas   | Canonical protocol and object schemas         |
-| Waveframe Telemetry | Runtime telemetry and evidence infrastructure |
-| Waveframe Stamp     | Artifact and metadata validation              |
-| Waveframe pdf Forge | Publication and artifact generation           |
+The action never reaches the financial mutation boundary.
 
 ---
 
-# Demonstrations
+## Compatibility
 
-Repositories in this organization demonstrate:
+Version compatibility and dependency requirements are maintained at [waveframelabs.org/compatibility.html](https://waveframelabs.org/compatibility.html).
 
-* governed financial mutations
-* execution-boundary enforcement
-* approval threshold enforcement
-* role separation
-* admissibility replay
-* runtime governance blocking
+## Links
 
-Each demo answers one question:
-
-> does the proposed action execute or not?
-
----
-
-# Compatibility
-
-Version compatibility and dependency requirements are documented at:
-
-https://waveframelabs.org/compatibility.html
-
----
-
-# Licensing
-
-| Category             | License         |
-| -------------------- | --------------- |
-| Tooling & Code       | Apache 2.0      |
-| Documentation        | CC BY-NC-SA 4.0 |
-| Governance & Methods | CC BY 4.0       |
-
----
-
-# Links
-
-Website — https://waveframelabs.org
-ORCID — https://orcid.org/0009-0006-6043-9295
-Contact — [swright@waveframelabs.org](mailto:swright@waveframelabs.org)
+- [Waveframe Labs](https://waveframelabs.org)
+- [Organization repositories](https://github.com/Waveframe-Labs)
+- [ORCID](https://orcid.org/0009-0006-6043-9295)
+- [swright@waveframelabs.org](mailto:swright@waveframelabs.org)
 
 ---
 
